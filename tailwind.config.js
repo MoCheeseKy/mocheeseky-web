@@ -8,11 +8,17 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'logo-image': "url('/MocheesekyLogo.svg')",
+        'profile': "url('/ProfilePicture.jpg')",
+      },
+      colors: {
+        'red': '#f65052',
+        'green': '#50D890',
+        'blue': '#607adb',
+        'dark': '#252525',
+        'light': '#fafafa',
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require('tailwindcss-animate')],
+};
