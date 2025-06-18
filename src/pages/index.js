@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
+import ContactSection from './ContactSection';
 import ScrollPage from '@/components/_shared/ScrollPage';
 
 export default function Home() {
@@ -46,42 +47,66 @@ export default function Home() {
   return (
     <>
       <div
-        className={`${inter.className} relative h-[100vh] flex flex-col snap-y snap-mandatory overflow-y-scroll scroll-smooth`}
+        className={`${inter.className} h-screen flex flex-col snap-y snap-mandatory overflow-y-scroll scroll-smooth`}
       >
+        {/* about */}
         <div
           ref={(el) => (sectionRefs.current[0] = el)}
           data-index={0}
-          className='flex min-h-screen bg-dark snap-normal snap-center'
+          className='snap-start bg-dark py-24 box-border min-h-screen flex overflow-y-auto'
+          style={{ minHeight: '100vh' }}
         >
-          <h1 className='text-white text-4xl'>Section {1}</h1>
+          <div className='w-full my-auto flex justify-center'>
+            <ContactSection />
+          </div>
         </div>
+
+        {/* skills */}
         <div
           ref={(el) => (sectionRefs.current[1] = el)}
           data-index={1}
-          className='flex min-h-screen bg-dark snap-normal snap-center'
+          className='snap-start bg-dark py-24 box-border min-h-screen flex overflow-y-auto'
+          style={{ minHeight: '100vh' }}
         >
-          <h1 className='text-white text-4xl'>Section {2}</h1>
+          <div className='w-full my-auto flex justify-center'>
+            <ContactSection />
+          </div>
         </div>
+
+        {/* experiences */}
         <div
           ref={(el) => (sectionRefs.current[2] = el)}
           data-index={2}
-          className='flex min-h-screen bg-dark snap-normal snap-center'
+          className='snap-start bg-dark py-24 box-border min-h-screen flex overflow-y-auto'
+          style={{ minHeight: '100vh' }}
         >
-          <h1 className='text-white text-4xl'>Section {3}</h1>
+          <div className='w-full my-auto flex justify-center'>
+            <ContactSection />
+          </div>
         </div>
+
+        {/* more */}
         <div
           ref={(el) => (sectionRefs.current[3] = el)}
           data-index={3}
-          className='flex min-h-screen bg-dark snap-normal snap-center'
+          className='snap-start bg-dark py-24 box-border min-h-screen flex overflow-y-auto'
+          style={{ minHeight: '100vh' }}
         >
-          <h1 className='text-white text-4xl'>Section {4}</h1>
+          <div className='w-full my-auto flex justify-center'>
+            <ContactSection />
+          </div>
         </div>
+
+        {/* contact */}
         <div
           ref={(el) => (sectionRefs.current[4] = el)}
           data-index={4}
-          className='flex min-h-screen bg-dark snap-normal snap-center'
+          className='snap-start bg-dark py-24 box-border min-h-screen flex overflow-y-auto'
+          style={{ minHeight: '100vh' }}
         >
-          <h1 className='text-white text-4xl'>Section {5}</h1>
+          <div className='w-full my-auto flex justify-center'>
+            <ContactSection />
+          </div>
         </div>
       </div>
 

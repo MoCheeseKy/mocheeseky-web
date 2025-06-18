@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react';
 
-import { useMousePosition } from '@/hooks/useMousePosiition';
+import { useMousePosition } from '@/hooks/useMousePosition';
 import { cn } from '@/lib/utils';
 
 function calculateCardRotation({

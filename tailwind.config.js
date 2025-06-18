@@ -15,10 +15,10 @@ module.exports = {
         'red': '#f65052',
         'green': '#50D890',
         'blue': '#607adb',
-        'dark': '#252525',
+        'dark': '#111',
         'light': '#fafafa',
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  // plugins: [require('tailwindcss-animate')],
 };

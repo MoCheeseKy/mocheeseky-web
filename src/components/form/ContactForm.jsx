@@ -1,40 +1,50 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ContactForm = () => {
   const [step, setStep] = useState(1);
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
+  const [SendStatus, setSendStatus] = useState('');
 
   const handleNext = () => setStep(step + 1);
-  const handleRestart = () => {
-    setStep(1);
-    setEmail('');
-    setName('');
-    setDescription('');
-  };
+
+  useEffect(() => {
+    if (SendStatus.toLowerCase() === 'y') {
+      console.log('test');
+    } else {
+      setStep(1);
+      setEmail('');
+      setName('');
+      setDescription('');
+      setSendStatus('');
+    }
+  }, [SendStatus]);
 
   return (
-    <div className='w-full max-w-[800px] p-6 mx-auto font-mono text-white bg-[#252525] rounded-lg shadow-xl min-h-[500px] border-[1px] border-gray-600'>
+    <div className='w-full md:max-w-[488px] h-fit p-6 font-mono text-white bg-[#252525] rounded-lg shadow-xl min-h-[400px] border-[1px] border-gray-600 '>
       <div className='mb-4'>
-        <div className='text-green'>
-          contact@rifky.muhammadprayudhi@gmail.com
+        <div className='text-green whitespace-normal break-words'>
+          Please drop your email, name, <br />
+          and tell me how i can help you ^^
         </div>
-        <div className='text-green'>
-          please drop your email, name, and tell me how i can help you ^^
+        <div className='text-green whitespace-normal break-words mt-4'>
+          ----------
         </div>
         {step >= 1 && (
           <>
-            <p className='mt-2'>
-              To start, could you give us your{' '}
+            <p className='mt-4'>
+              To start, could you give me your{' '}
               <span className='text-blue'>email?</span>
             </p>
             {email ? (
-              <div className='text-green'>✔ {email}</div>
+              <div className='text-green whitespace-normal break-words'>
+                ✔ {email}
+              </div>
             ) : (
               <input
                 type='email'
-                className='w-full text-green-300 bg-transparent border-b border-blue focus:outline-none'
+                className='w-full text-green bg-transparent border-b border-blue focus:outline-none'
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setEmail(e.target.value);
@@ -53,11 +63,13 @@ const ContactForm = () => {
               Awesome! And whats your <span className='text-blue'>name?</span>
             </p>
             {name ? (
-              <div className='text-green'>✔ {name}</div>
+              <div className='text-green whitespace-normal break-words'>
+                ✔ {name}
+              </div>
             ) : (
               <input
                 type='text'
-                className='w-full text-green-300 bg-transparent border-b border-blue focus:outline-none'
+                className='w-full text-green bg-transparent border-b border-blue focus:outline-none'
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setName(e.target.value);
@@ -77,11 +89,18 @@ const ContactForm = () => {
               <span className='text-blue'>how can we help you?</span>
             </p>
             {description ? (
-              <div className='text-green'>✔ {description}</div>
+              <>
+                <div className='text-green whitespace-normal break-words'>
+                  ✔ {description}
+                </div>
+                <div className='text-green whitespace-normal break-words mt-4'>
+                  ----------
+                </div>
+              </>
             ) : (
               <textarea
                 rows='2'
-                className='w-full text-green-300 bg-transparent border-b resize-none border-blue focus:outline-none'
+                className='w-full text-green bg-transparent border-b resize-none border-blue focus:outline-none'
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setDescription(e.target.value);
@@ -94,45 +113,59 @@ const ContactForm = () => {
           </>
         )}
       </div>
-
       {step >= 4 && (
         <>
-          <p className='text-blue-300'>Thank you! Plese check again:</p>
-          {/* <pre className='mt-2 text-white'>
-            email: <span className='text-green-300'>{email}</span>
-            <br />
-            name: <span className='text-green-300'>{name}</span>
-            <br />
-            description: <span className='text-green-300'>{description}</span>
-          </pre> */}
+          <p className='text-blue-300 mt-6'>Thank you! Plese check again:</p>
           <div className='flex flex-col gap-4 mt-4'>
             <div>
-              <div className='text-green-300'>Email:</div>
+              <div className='text-green whitespace-normal break-words'>
+                Email:
+              </div>
               <div className='text-white'>{email}</div>
             </div>
             <div>
-              <div className='text-green-300'>Name:</div>
+              <div className='text-green whitespace-normal break-words'>
+                Name:
+              </div>
               <div className='text-white'>{name}</div>
             </div>
             <div>
-              <div className='text-green-300'>Description:</div>
-              <div className='text-white text-wrap'>{description}</div>
+              <div className='text-green whitespace-normal break-words'>
+                Description:
+              </div>
+              <div className='text-white whitespace-normal break-words'>
+                {description}
+              </div>
             </div>
           </div>
-          <div className='flex gap-2 mt-4'>
-            <button
-              className='px-4 py-1 bg-gray-700 rounded hover:bg-gray-600'
-              onClick={handleRestart}
-            >
-              Restart
-            </button>
-            <button
-              className='px-4 py-1 text-white bg-blue-500 rounded hover:bg-blue-400'
-              onClick={() => alert('Form submitted!')}
-            >
-              Send it!
-            </button>
-          </div>
+          {step >= 1 && (
+            <>
+              <p className='mt-4'>
+                Send?
+                <span className='text-blue'> (Y/N)</span>
+              </p>
+              {SendStatus ? (
+                <>
+                  <div className='text-green whitespace-normal break-words'>
+                    ✔ {SendStatus}
+                  </div>
+                  <div className='text-green whitespace-normal break-words mt-6'>
+                    Thank you for reaching out! <br />
+                    I’ll review your message and get back to you shortly ^^{' '}
+                    <br />
+                    Until then, have a great day!
+                  </div>
+                </>
+              ) : (
+                <input
+                  type='sendStatus'
+                  className='w-full text-green bg-transparent border-b border-blue focus:outline-none'
+                  onChange={(e) => setSendStatus(e.target.value)}
+                  autoFocus
+                />
+              )}
+            </>
+          )}
         </>
       )}
     </div>
