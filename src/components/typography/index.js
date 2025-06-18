@@ -9,6 +9,7 @@ import Insight from './Insight';
 
 // Special
 import Typewrite from './Typewrite';
+import WavyText from './WavyText';
 
 const Typography = {
   Small,
@@ -20,6 +21,7 @@ const Typography = {
   Insight,
   //
   Typewrite,
+  WavyText,
 };
 
 export default Typography;

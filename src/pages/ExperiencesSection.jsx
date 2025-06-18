@@ -6,7 +6,7 @@ export default function ExperiencesSection() {
   return (
     <>
       <Wrapper className='flex flex-col justify-center gap-12 text-white md:justify-start lg:justify-between'>
-        <Typography.Insight text={`My Journey.`} />
+        <Typography.Insight bold text={`My Journey.`} />
         <Timeline />
       </Wrapper>
     </>

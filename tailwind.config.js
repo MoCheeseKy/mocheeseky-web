@@ -10,7 +10,9 @@ module.exports = {
       backgroundImage: {
         'logo-image': "url('/MocheesekyLogo.svg')",
         'dspi': "url('/dspiProjectOverview.svg')",
-        'profile': "url('/ProfilePicture.jpg')",
+        'satu-dna': "url('/satuDNAProjectOverview.svg')",
+        'profile': "url('/ProfilePicture.png')",
+        'iwu-mentor': "url('/iwuCertivicate.jpg')",
       },
       colors: {
         'red': '#f65052',

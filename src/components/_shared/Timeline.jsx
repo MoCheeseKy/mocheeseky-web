@@ -97,7 +97,7 @@ export default function Timeline() {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className='absolute inset-x-0 top-0 w-[3px] bg-gradient-to-b via-blue to-transparent rounded-full'
+            className='absolute inset-x-0 top-0 w-[3px] bg-gradient-to-b from-blue to-transparent rounded-full'
           />
         </div>
 

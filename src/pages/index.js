@@ -2,10 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
+import MeteorBackground from '@/components/_shared/MeteorBackground';
 import ContactSection from './ContactSection';
 import ScrollPage from '@/components/_shared/ScrollPage';
 import SmoothCursor from '@/components/_shared/SmoothCursor';
 import ExperiencesSection from './ExperiencesSection';
+import AboutSection from './AboutSection';
+import ProjectSection from './ProjectSection';
 
 export default function Home() {
   const [ActiveSection, setActiveSection] = useState(0);
@@ -48,72 +51,74 @@ export default function Home() {
 
   return (
     <>
-      <div
-        className={`${inter.className} h-screen flex flex-col snap-y snap-mandatory overflow-y-scroll scroll-smooth `}
-      >
-        <SmoothCursor />
-        {/* about */}
+      <MeteorBackground>
         <div
-          ref={(el) => (sectionRefs.current[0] = el)}
-          data-index={0}
-          className='box-border flex min-h-screen py-24 overflow-y-auto snap-start bg-dark'
-          style={{ minHeight: '100vh' }}
+          className={`${inter.className} h-screen flex flex-col snap-y snap-mandatory overflow-y-scroll scroll-smooth `}
         >
-          <div className='flex justify-center w-full my-auto'>
-            <ContactSection />
+          <SmoothCursor />
+          {/* about */}
+          <div
+            ref={(el) => (sectionRefs.current[0] = el)}
+            data-index={0}
+            className='box-border flex min-h-screen py-24 overflow-y-auto snap-start'
+            style={{ minHeight: '100vh' }}
+          >
+            <div className='flex justify-center w-full my-auto'>
+              <AboutSection />
+            </div>
+          </div>
+
+          {/* skills */}
+          <div
+            ref={(el) => (sectionRefs.current[1] = el)}
+            data-index={1}
+            className='box-border flex min-h-screen py-24 overflow-y-auto snap-start'
+            style={{ minHeight: '100vh' }}
+          >
+            <div className='flex justify-center w-full my-auto'>
+              <ContactSection />
+            </div>
+          </div>
+
+          {/* experiences */}
+          <div
+            ref={(el) => (sectionRefs.current[2] = el)}
+            data-index={2}
+            className='box-border flex min-h-screen py-24 overflow-y-auto snap-start'
+            style={{ minHeight: '100vh' }}
+          >
+            <div className='flex justify-center w-full my-auto'>
+              <ExperiencesSection />
+            </div>
+          </div>
+
+          {/* more */}
+          <div
+            ref={(el) => (sectionRefs.current[3] = el)}
+            data-index={3}
+            className='box-border flex min-h-screen py-24 overflow-y-auto snap-start'
+            style={{ minHeight: '100vh' }}
+          >
+            <div className='flex justify-center w-full my-auto'>
+              <ProjectSection />
+            </div>
+          </div>
+
+          {/* contact */}
+          <div
+            ref={(el) => (sectionRefs.current[4] = el)}
+            data-index={4}
+            className='box-border flex min-h-screen py-24 overflow-y-auto snap-start'
+            style={{ minHeight: '100vh' }}
+          >
+            <div className='flex justify-center w-full my-auto'>
+              <ContactSection />
+            </div>
           </div>
         </div>
 
-        {/* skills */}
-        <div
-          ref={(el) => (sectionRefs.current[1] = el)}
-          data-index={1}
-          className='box-border flex min-h-screen py-24 overflow-y-auto snap-start bg-dark'
-          style={{ minHeight: '100vh' }}
-        >
-          <div className='flex justify-center w-full my-auto'>
-            <ContactSection />
-          </div>
-        </div>
-
-        {/* experiences */}
-        <div
-          ref={(el) => (sectionRefs.current[2] = el)}
-          data-index={2}
-          className='box-border flex min-h-screen py-24 overflow-y-auto snap-start bg-dark'
-          style={{ minHeight: '100vh' }}
-        >
-          <div className='flex justify-center w-full my-auto'>
-            <ExperiencesSection />
-          </div>
-        </div>
-
-        {/* more */}
-        <div
-          ref={(el) => (sectionRefs.current[3] = el)}
-          data-index={3}
-          className='box-border flex min-h-screen py-24 overflow-y-auto snap-start bg-dark'
-          style={{ minHeight: '100vh' }}
-        >
-          <div className='flex justify-center w-full my-auto'>
-            <ContactSection />
-          </div>
-        </div>
-
-        {/* contact */}
-        <div
-          ref={(el) => (sectionRefs.current[4] = el)}
-          data-index={4}
-          className='box-border flex min-h-screen py-24 overflow-y-auto snap-start bg-dark'
-          style={{ minHeight: '100vh' }}
-        >
-          <div className='flex justify-center w-full my-auto'>
-            <ContactSection />
-          </div>
-        </div>
-      </div>
-
-      <ScrollPage ActiveSection={ActiveSection} onClick={scrollToSection} />
+        <ScrollPage ActiveSection={ActiveSection} onClick={scrollToSection} />
+      </MeteorBackground>
     </>
   );
 }
