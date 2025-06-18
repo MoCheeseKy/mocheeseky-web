@@ -1,13 +1,14 @@
 import ContactForm from '@/components/form/ContactForm';
 import Wrapper from '@/components/_shared/Wrapper';
 import Typography from '@/components/typography';
+import { motion } from 'framer-motion';
 
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 export default function ContactSection() {
   return (
     <>
-      <Wrapper className='flex flex-col justify-center gap-12 text-white  lg:flex-row md:justify-start lg:justify-between'>
+      <Wrapper className='flex flex-col justify-center gap-12 text-white lg:flex-row md:justify-start lg:justify-between'>
         <div>
           <Typography.Insight bold text='Get In Touch' />
           <Typography.Large
@@ -50,7 +51,13 @@ export default function ContactSection() {
             </a>
           </div>
         </div>
-        <ContactForm />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <ContactForm />
+        </motion.div>
       </Wrapper>
     </>
   );
