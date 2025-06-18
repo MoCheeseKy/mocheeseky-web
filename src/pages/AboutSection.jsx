@@ -30,8 +30,8 @@ export default function AboutSection() {
           />
         </div>
         <div className='flex justify-center'>
-          <SkewCard className='w-[75%] overflow-hidden md:w-fit rounded-xl'>
-            <div className='w-full md:w-[344px] aspect-[3/4] bg-profile bg-no-repeat bg-cover'></div>
+          <SkewCard className='w-full max-w-[344px] overflow-hidden rounded-xl md:w-fit'>
+            <div className='w-full md:w-[344px] md:h-auto aspect-[3/4] bg-profile bg-no-repeat bg-cover'></div>
           </SkewCard>
         </div>
       </Wrapper>

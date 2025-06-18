@@ -6,10 +6,10 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 export default function ProjectSection() {
   return (
     <>
-      <Wrapper className='flex flex-col justify-center h-2 gap-12 text-white md:justify-start lg:justify-between'>
+      <Wrapper className='flex flex-col justify-center gap-12 text-white md:justify-start lg:justify-between'>
         <Typography.Insight bold text={`Example Project Overview.`} />
 
-        <div className='grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6'>
+        <div className='grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-6'>
           {/* project items */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -29,18 +29,22 @@ export default function ProjectSection() {
             </div>
           </motion.div>
           <div className='flex flex-col col-span-2 gap-4'>
-            <Typography.WavyText text={'SatuDNA'} />
-            <div className='flex gap-4'>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-blue'>
+            <Typography.WavyText
+              delay={0.5}
+              className='md:mt-0 mt-[-24px]'
+              text={'SatuDNA'}
+            />
+            <div className='flex flex-wrap gap-2 md:gap-4'>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-blue'>
                 Next.js
               </div>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-blue'>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-blue'>
                 Tailwind CSS
               </div>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-blue'>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-blue'>
                 Material UI
               </div>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-red'>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-red'>
                 Frontend Developer
               </div>
             </div>
@@ -71,18 +75,22 @@ export default function ProjectSection() {
             </div>
           </motion.div>
           <div className='flex flex-col col-span-2 gap-4'>
-            <Typography.WavyText text={'Reconciliation KAI'} />
-            <div className='flex gap-4'>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-blue'>
+            <Typography.WavyText
+              delay={0.5}
+              className='md:mt-0 mt-[-24px]'
+              text={'Reconciliation KAI'}
+            />
+            <div className='flex flex-wrap gap-2 md:gap-4'>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-blue'>
                 Next.js
               </div>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-blue'>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-blue'>
                 Tailwind CSS
               </div>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-blue'>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-blue'>
                 ANT Design
               </div>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-red'>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-red'>
                 Frontend Developer Team Lead
               </div>
             </div>
@@ -113,15 +121,19 @@ export default function ProjectSection() {
             </div>
           </motion.div>
           <div className='flex flex-col col-span-2 gap-4'>
-            <Typography.WavyText text={'Indonesian Food Systems Dashboard'} />
-            <div className='flex gap-4'>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-blue'>
+            <Typography.WavyText
+              delay={0.5}
+              className='md:mt-0 mt-[-24px]'
+              text={'Indonesian Food Systems Dashboard'}
+            />
+            <div className='flex flex-wrap gap-2 md:gap-4 '>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-blue'>
                 Next.js
               </div>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-blue'>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-blue'>
                 CSS Module
               </div>
-              <div className='px-6 py-1 text-xs text-white rounded-full bg-red'>
+              <div className='px-6 py-1 text-[10px] text-white rounded-full bg-red'>
                 Frontend Developer
               </div>
             </div>
@@ -149,9 +161,7 @@ export default function ProjectSection() {
             className='flex items-center gap-4 text-green hover:text-blue'
             href='https://www.linkedin.com/in/rifkymprayudhi/'
           >
-            <Typography.Large
-              text={`Let’s connect on LinkedIn! Click here to learn more`}
-            />
+            <Typography.Large text={`More in touch`} />
             <FaArrowRightLong />
           </a>
         </div>

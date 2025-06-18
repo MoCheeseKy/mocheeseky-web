@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-export default function WavyText({ text, delay = 0 }) {
+export default function WavyText({ text, delay = 0, className }) {
   const letters = text.split('');
 
   const container = {
@@ -27,7 +27,7 @@ export default function WavyText({ text, delay = 0 }) {
 
   return (
     <motion.div
-      className='flex flex-wrap text-xl font-bold text-white md:text-2xl lg:text-3xl'
+      className={`flex flex-wrap text-lg font-bold text-white md:text-2xl lg:text-3xl ${className}`}
       variants={container}
       initial='hidden'
       whileInView='visible'

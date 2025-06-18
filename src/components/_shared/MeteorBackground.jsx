@@ -16,7 +16,7 @@ export default function MeteorBackground({ children }) {
       setTimeout(() => {
         setMeteors((prev) => prev.filter((m) => m.id !== newMeteor.id));
       }, 1000);
-    }, 500);
+    }, 200);
 
     return () => clearInterval(interval);
   }, []);
