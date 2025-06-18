@@ -76,7 +76,7 @@ export default function Home() {
           <div
             ref={(el) => (sectionRefs.current[1] = el)}
             data-index={1}
-            className='box-border flex min-h-screen py-24 overflow-y-auto snap-start'
+            className='box-border flex min-h-screen py-24 overflow-x-hidden overflow-y-auto snap-start'
             style={{ minHeight: '100vh' }}
           >
             <div className='flex justify-center w-full my-auto'>
