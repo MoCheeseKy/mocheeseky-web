@@ -6,7 +6,7 @@ export default function SkillSection() {
   return (
     <>
       <Wrapper className='flex flex-col justify-center w-full text-white lg:flex-row md:justify-start lg:justify-between'>
-        <div className='max-w-[444px]'>
+        <div className='max-w-[444px] mih-h-[168px]'>
           <Typography.Insight bold text={`Expertise.`} className={'w-fit'} />
           <p className='mt-12 text-base break-words whitespace-normal lg:text-lg'>
             I possess a range of skills, with my{' '}
@@ -19,7 +19,7 @@ export default function SkillSection() {
             animations.
           </p>
         </div>
-        <div className='relative bottom-[-50px] right-[-50px] md:bottom-0 md:right-0'>
+        <div className='relative bottom-[-40px] right-[-30px] md:bottom-0 md:right-0'>
           <OrbitingCircles />
         </div>
       </Wrapper>
