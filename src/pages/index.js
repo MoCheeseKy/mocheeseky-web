@@ -4,6 +4,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 import ContactSection from './ContactSection';
 import ScrollPage from '@/components/_shared/ScrollPage';
+import SmoothCursor from '@/components/_shared/SmoothCursor';
+import StickyTimeline from '@/components/_shared/Timeline';
 
 export default function Home() {
   const [ActiveSection, setActiveSection] = useState(0);
@@ -47,16 +49,17 @@ export default function Home() {
   return (
     <>
       <div
-        className={`${inter.className} h-screen flex flex-col snap-y snap-mandatory overflow-y-scroll scroll-smooth`}
+        className={`${inter.className} h-screen flex flex-col snap-y snap-mandatory overflow-y-scroll scroll-smooth `}
       >
+        <SmoothCursor />
         {/* about */}
         <div
           ref={(el) => (sectionRefs.current[0] = el)}
           data-index={0}
-          className='snap-start bg-dark py-24 box-border min-h-screen flex overflow-y-auto'
+          className='box-border flex min-h-screen py-24 overflow-y-auto snap-start bg-dark'
           style={{ minHeight: '100vh' }}
         >
-          <div className='w-full my-auto flex justify-center'>
+          <div className='flex justify-center w-full my-auto'>
             <ContactSection />
           </div>
         </div>
@@ -65,10 +68,10 @@ export default function Home() {
         <div
           ref={(el) => (sectionRefs.current[1] = el)}
           data-index={1}
-          className='snap-start bg-dark py-24 box-border min-h-screen flex overflow-y-auto'
+          className='box-border flex min-h-screen py-24 overflow-y-auto snap-start bg-dark'
           style={{ minHeight: '100vh' }}
         >
-          <div className='w-full my-auto flex justify-center'>
+          <div className='flex justify-center w-full my-auto'>
             <ContactSection />
           </div>
         </div>
@@ -77,11 +80,11 @@ export default function Home() {
         <div
           ref={(el) => (sectionRefs.current[2] = el)}
           data-index={2}
-          className='snap-start bg-dark py-24 box-border min-h-screen flex overflow-y-auto'
+          className='box-border flex min-h-screen py-24 overflow-y-auto snap-start bg-dark'
           style={{ minHeight: '100vh' }}
         >
-          <div className='w-full my-auto flex justify-center'>
-            <ContactSection />
+          <div className='flex justify-center w-full my-auto'>
+            <StickyTimeline />
           </div>
         </div>
 
@@ -89,10 +92,10 @@ export default function Home() {
         <div
           ref={(el) => (sectionRefs.current[3] = el)}
           data-index={3}
-          className='snap-start bg-dark py-24 box-border min-h-screen flex overflow-y-auto'
+          className='box-border flex min-h-screen py-24 overflow-y-auto snap-start bg-dark'
           style={{ minHeight: '100vh' }}
         >
-          <div className='w-full my-auto flex justify-center'>
+          <div className='flex justify-center w-full my-auto'>
             <ContactSection />
           </div>
         </div>
@@ -101,10 +104,10 @@ export default function Home() {
         <div
           ref={(el) => (sectionRefs.current[4] = el)}
           data-index={4}
-          className='snap-start bg-dark py-24 box-border min-h-screen flex overflow-y-auto'
+          className='box-border flex min-h-screen py-24 overflow-y-auto snap-start bg-dark'
           style={{ minHeight: '100vh' }}
         >
-          <div className='w-full my-auto flex justify-center'>
+          <div className='flex justify-center w-full my-auto'>
             <ContactSection />
           </div>
         </div>
