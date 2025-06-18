@@ -26,7 +26,7 @@ export default function AboutSection() {
           </div>
           <Typography.Regular
             className='md:w-[80%]'
-            text='I am organized, fast learner, and high-spirited person with an interest in new technology who is passionate about frontend web developer. Experienced for 1 year with a background in frontend web development field.'
+            text='I am organized, fast learner, and high-spirited person with an interest in new technology who is passionate about frontend web developer. Experienced for 3 year with a background in frontend web development field.'
           />
         </div>
         <div className='flex justify-center'>
