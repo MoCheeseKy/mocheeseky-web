@@ -7,9 +7,9 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 export default function ContactSection() {
   return (
     <>
-      <Wrapper className=' text-white flex flex-col lg:flex-row md:justify-start lg:justify-between justify-center gap-12'>
+      <Wrapper className='flex flex-col justify-center gap-12 text-white  lg:flex-row md:justify-start lg:justify-between'>
         <div>
-          <Typography.Insight text='Contact Me' />
+          <Typography.Insight text='Get In Touch' />
           <Typography.Large
             text='Got a question, an idea, or a project in mind? '
             className='mt-6 lg:mt-12'

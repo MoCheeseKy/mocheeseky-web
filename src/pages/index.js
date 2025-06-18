@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] });
 import ContactSection from './ContactSection';
 import ScrollPage from '@/components/_shared/ScrollPage';
 import SmoothCursor from '@/components/_shared/SmoothCursor';
-import StickyTimeline from '@/components/_shared/Timeline';
+import ExperiencesSection from './ExperiencesSection';
 
 export default function Home() {
   const [ActiveSection, setActiveSection] = useState(0);
@@ -84,7 +84,7 @@ export default function Home() {
           style={{ minHeight: '100vh' }}
         >
           <div className='flex justify-center w-full my-auto'>
-            <StickyTimeline />
+            <ExperiencesSection />
           </div>
         </div>
 
