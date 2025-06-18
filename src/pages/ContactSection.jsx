@@ -10,7 +10,7 @@ export default function ContactSection() {
     <>
       <Wrapper className='flex flex-col justify-center gap-12 text-white lg:flex-row md:justify-start lg:justify-between'>
         <div>
-          <Typography.Insight bold text='Get In Touch' />
+          <Typography.Insight bold text='Get In Touch.' />
           <Typography.Large
             text='Got a question, an idea, or a project in mind? '
             className='mt-6 lg:mt-12'

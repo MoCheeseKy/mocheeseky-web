@@ -2,13 +2,17 @@ import { useEffect, useRef, useState } from 'react';
 import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
-import MeteorBackground from '@/components/_shared/MeteorBackground';
-import ContactSection from './ContactSection';
+// pemanis
 import ScrollPage from '@/components/_shared/ScrollPage';
+import MeteorBackground from '@/components/_shared/MeteorBackground';
 import SmoothCursor from '@/components/_shared/SmoothCursor';
-import ExperiencesSection from './ExperiencesSection';
+
+// sections
 import AboutSection from './AboutSection';
+import SkillSection from './SkillSection';
+import ExperiencesSection from './ExperiencesSection';
 import ProjectSection from './ProjectSection';
+import ContactSection from './ContactSection';
 
 export default function Home() {
   const [ActiveSection, setActiveSection] = useState(0);
@@ -76,7 +80,7 @@ export default function Home() {
             style={{ minHeight: '100vh' }}
           >
             <div className='flex justify-center w-full my-auto'>
-              <ContactSection />
+              <SkillSection />
             </div>
           </div>
 
