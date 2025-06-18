@@ -19,7 +19,7 @@ export default function SkillSection() {
             animations.
           </p>
         </div>
-        <div>
+        <div className='relative bottom-[-50px] right-[-50px] md:bottom-0 md:right-0'>
           <OrbitingCircles />
         </div>
       </Wrapper>
