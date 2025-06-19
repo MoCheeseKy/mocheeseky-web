@@ -24,7 +24,7 @@ export default function ProjectSection() {
               </div>
 
               {/* Wrapper dengan border dan background image */}
-              <div className='bg-[#1f1f1f] border-4 border-white shadow-xl rounded-md overflow-hidden'>
+              <div className='bg-[#1f1f1f] border border-white shadow-xl rounded-md overflow-hidden'>
                 <div className='bg-satu-dna bg-cover bg-center w-full aspect-[16/9]' />
               </div>
             </div>
@@ -70,8 +70,8 @@ export default function ProjectSection() {
               </div>
 
               {/* Wrapper dengan border dan background image */}
-              <div className='bg-[#1f1f1f] border-4 border-white shadow-xl rounded-md overflow-hidden'>
-                <div className='bg-dspi bg-cover bg-center w-full aspect-[16/9]' />
+              <div className='bg-[#1f1f1f] border border-white shadow-xl rounded-md overflow-hidden'>
+                <div className='bg-kai bg-cover bg-center w-full aspect-[16/9]' />
               </div>
             </div>
           </motion.div>
@@ -116,7 +116,7 @@ export default function ProjectSection() {
               </div>
 
               {/* Wrapper dengan border dan background image */}
-              <div className='bg-[#1f1f1f] border-4 border-white shadow-xl rounded-md overflow-hidden'>
+              <div className='bg-[#1f1f1f] border border-white shadow-xl rounded-md overflow-hidden'>
                 <div className='bg-dspi bg-cover bg-center w-full aspect-[16/9]' />
               </div>
             </div>

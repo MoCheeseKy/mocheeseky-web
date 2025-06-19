@@ -58,21 +58,21 @@ export default function Home() {
 
   return (
     <>
+      {ActiveSection > 0 && (
+        <Button
+          className={
+            'absolute bottom-0 right-0 mr-8 mb-8 z-20 rounded-full py-2 px-3'
+          }
+          onClick={() => scrollToSection(0)}
+        >
+          <FaArrowUpLong className='text-xl' />
+        </Button>
+      )}
       <MeteorBackground>
         <div
           className={`${inter.className} h-screen flex flex-col snap-y snap-mandatory overflow-y-scroll scroll-smooth `}
         >
           <SmoothCursor />
-          {ActiveSection > 0 && (
-            <Button
-              className={
-                'absolute bottom-0 mb-[26px] md:mb-12 right-6  md:right-12 z-50 rounded-full py-2 px-3'
-              }
-              onClick={() => scrollToSection(0)}
-            >
-              <FaArrowUpLong className='text-xl' />
-            </Button>
-          )}
           {/* about */}
           <div
             ref={(el) => (sectionRefs.current[0] = el)}

@@ -13,6 +13,7 @@ module.exports = {
         'satu-dna': "url('/satuDNAProjectOverview.svg')",
         'profile': "url('/ProfilePicture.png')",
         'iwu-mentor': "url('/iwuCertivicate.jpg')",
+        'kai': "url('/KAI.jpg')",
       },
       colors: {
         'red': '#f65052',

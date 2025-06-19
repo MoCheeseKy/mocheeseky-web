@@ -12,6 +12,7 @@ const ContactForm = () => {
   useEffect(() => {
     if (SendStatus.toLowerCase() === 'y') {
       console.log('test');
+      handleSendEmail();
     } else {
       setStep(1);
       setEmail('');
@@ -20,6 +21,33 @@ const ContactForm = () => {
       setSendStatus('');
     }
   }, [SendStatus]);
+
+  const handleSendEmail = () => {
+    if (!email || !name || !description) {
+      return;
+    }
+
+    // Encoder untuk memastikan spasi dan karakter khusus di URL aman
+    const encodedSubject = encodeURIComponent(`Pesan dari ${name}`);
+    const encodedBody = encodeURIComponent(
+      `Nama: ${name}\n` + `Email: ${email}\n\n` + `Pesan:\n${description}`
+    );
+
+    // Alamat email tujuan (ganti dengan email Anda)
+    const recipientEmail = 'rifky.muhammadprayudhi@gmail.com'; // GANTI DENGAN ALAMAT EMAIL TUJUAN ANDA!
+
+    // Bangun URL mailto:
+    const mailtoUrl = `mailto:${recipientEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+
+    // Membuka klien email default pengguna
+    // window.location.href = mailtoUrl; // Ini akan mengalihkan halaman saat ini
+    window.open(mailtoUrl, '_blank'); // Lebih baik membuka di tab/jendela baru
+
+    // Opsional: Reset form setelah pengiriman
+    // setEmail('');
+    // setName('');
+    // setDescription('');
+  };
 
   return (
     <div className='w-full md:max-w-[488px] h-fit p-6 font-mono text-white bg-[#252525] rounded-lg shadow-xl min-h-[400px] border-[1px] border-gray-600 '>
