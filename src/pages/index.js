@@ -66,7 +66,7 @@ export default function Home() {
           {ActiveSection > 0 && (
             <Button
               className={
-                'absolute bottom-0 mb-[26px] md:mb-12 right-6  md:right-12 z-50 rounded-full py-2 px-3'
+                'absolute bottom-0 mb-[100px] md:mb-12 right-6  md:right-12 z-50 rounded-full py-2 px-3'
               }
               onClick={() => scrollToSection(0)}
             >
