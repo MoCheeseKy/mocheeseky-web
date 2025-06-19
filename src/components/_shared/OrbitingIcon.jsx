@@ -8,24 +8,32 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaJs,
+  FaVuejs,
+  FaSass,
 } from 'react-icons/fa';
 import { SiNotion, SiNextdotjs, SiTypescript } from 'react-icons/si';
+import { RiTailwindCssFill } from 'react-icons/ri';
+import { DiVisualstudio } from 'react-icons/di';
 
 const outerIcons = [
+  { icon: FaHtml5, color: '#e34c26' },
+  { icon: FaCss3Alt, color: '#2965f1' },
+  { icon: RiTailwindCssFill, color: '#22d3ee' },
+  { icon: FaSass, color: '#CC6699' },
+  { icon: FaJs, color: '#f7df1e' },
+  { icon: SiTypescript, color: '#3178c6' },
+  { icon: FaReact, color: '#61DAFB' },
+  { icon: SiNextdotjs, color: '#fff' },
+  { icon: FaVuejs, color: '#42B883' },
+];
+
+const innerIcons = [
   { icon: FaGithub, color: '#fff' },
   { icon: FaGitlab, color: '#e24329' },
   { icon: FaTrello, color: '#0079bf' },
   { icon: FaFigma, color: '#f24e1e' },
   { icon: SiNotion, color: '#fff' },
-];
-
-const innerIcons = [
-  { icon: FaReact, color: '#61DAFB' },
-  { icon: SiNextdotjs, color: '#fff' },
-  { icon: FaHtml5, color: '#e34c26' },
-  { icon: FaCss3Alt, color: '#2965f1' },
-  { icon: FaJs, color: '#f7df1e' },
-  { icon: SiTypescript, color: '#3178c6' },
+  { icon: DiVisualstudio, color: '#007ACC ' },
 ];
 
 const OrbitingCircles = () => {

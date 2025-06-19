@@ -1,8 +1,9 @@
 import Wrapper from '@/components/_shared/Wrapper';
 import SkewCard from '@/components/_shared/SkewEffect';
 import Typography from '@/components/typography';
+import Button from '@/components/_shared/Button';
 
-export default function AboutSection() {
+export default function AboutSection({ setActivePage }) {
   return (
     <>
       <Wrapper className='flex flex-col justify-center gap-12 text-white lg:flex-row md:justify-start lg:justify-between'>
@@ -28,6 +29,16 @@ export default function AboutSection() {
             className='md:w-[80%]'
             text='I am organized, fast learner, and high-spirited person with an interest in new technology who is passionate about frontend web developer. Experienced for 3 year with a background in frontend web development field.'
           />
+          <div className='flex items-center gap-4 mt-4 text-sm md:gap-6'>
+            <a
+              href='/Rifky Muhammad Prayudhi CV.pdf'
+              download='Rifky Muhammad Prayudhi CV.pdf'
+            >
+              <Button>Download CV</Button>
+            </a>
+            Or
+            <Button onClick={() => setActivePage(4)}>Get in touch!</Button>
+          </div>
         </div>
         <div className='flex justify-center'>
           <SkewCard className='w-full max-w-[344px] overflow-hidden rounded-xl md:w-fit'>

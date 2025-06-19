@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 import ScrollPage from '@/components/_shared/ScrollPage';
 import MeteorBackground from '@/components/_shared/MeteorBackground';
 import SmoothCursor from '@/components/_shared/SmoothCursor';
+import Button from '@/components/_shared/Button';
 
 // sections
 import AboutSection from './AboutSection';
@@ -13,6 +14,8 @@ import SkillSection from './SkillSection';
 import ExperiencesSection from './ExperiencesSection';
 import ProjectSection from './ProjectSection';
 import ContactSection from './ContactSection';
+
+import { FaArrowUpLong } from 'react-icons/fa6';
 
 export default function Home() {
   const [ActiveSection, setActiveSection] = useState(0);
@@ -60,6 +63,16 @@ export default function Home() {
           className={`${inter.className} h-screen flex flex-col snap-y snap-mandatory overflow-y-scroll scroll-smooth `}
         >
           <SmoothCursor />
+          {ActiveSection > 0 && (
+            <Button
+              className={
+                'absolute bottom-6 right-6 md:bottom-12 md:right-12 z-50 rounded-full py-2 px-3'
+              }
+              onClick={() => scrollToSection(0)}
+            >
+              <FaArrowUpLong className='text-xl' />
+            </Button>
+          )}
           {/* about */}
           <div
             ref={(el) => (sectionRefs.current[0] = el)}
@@ -68,7 +81,7 @@ export default function Home() {
             style={{ minHeight: '100vh' }}
           >
             <div className='flex justify-center w-full my-auto'>
-              <AboutSection />
+              <AboutSection setActivePage={scrollToSection} />
             </div>
           </div>
 

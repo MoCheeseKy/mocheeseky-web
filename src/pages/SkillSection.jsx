@@ -10,7 +10,7 @@ export default function SkillSection() {
           <Typography.Insight bold text={`Expertise.`} className={'w-fit'} />
           <p className='mt-12 text-base break-words whitespace-normal lg:text-lg'>
             I possess a range of skills, with my{' '}
-            <span className='font-bold text-red'>
+            <span className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue to-red'>
               core expertise in React.js and Next.js
             </span>
             . I{`'`}m also proficient in various UI libraries such as Material

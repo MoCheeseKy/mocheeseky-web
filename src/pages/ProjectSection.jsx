@@ -2,6 +2,7 @@ import Wrapper from '@/components/_shared/Wrapper';
 import Typography from '@/components/typography';
 import { motion } from 'framer-motion';
 import { FaArrowRightLong } from 'react-icons/fa6';
+import Button from '@/components/_shared/Button';
 
 export default function ProjectSection() {
   return (
@@ -18,7 +19,7 @@ export default function ProjectSection() {
           >
             <div className='relative w-full max-w-md mx-auto'>
               {/* Label Tahun */}
-              <div className='absolute z-10 px-2 py-1 text-sm font-bold border border-white rounded shadow-md tex-white bg-dark -top-4 left-4'>
+              <div className='absolute z-10 px-2 py-1 text-sm font-bold border border-white shadow-md tex-white bg-dark -top-4 left-4'>
                 2024 -2025
               </div>
 
@@ -64,7 +65,7 @@ export default function ProjectSection() {
           >
             <div className='relative w-full max-w-md mx-auto'>
               {/* Label Tahun */}
-              <div className='absolute z-10 px-2 py-1 text-sm font-bold border border-white rounded shadow-md tex-white bg-dark -top-4 left-4'>
+              <div className='absolute z-10 px-2 py-1 text-sm font-bold border border-white shadow-md tex-white bg-dark -top-4 left-4'>
                 2024 - 2025
               </div>
 
@@ -110,7 +111,7 @@ export default function ProjectSection() {
           >
             <div className='relative w-full max-w-md mx-auto'>
               {/* Label Tahun */}
-              <div className='absolute z-10 px-2 py-1 text-sm font-bold border border-white rounded shadow-md tex-white bg-dark -top-4 left-4'>
+              <div className='absolute z-10 px-2 py-1 text-sm font-bold border border-white shadow-md tex-white bg-dark -top-4 left-4'>
                 2023 - 2024
               </div>
 
@@ -146,6 +147,14 @@ export default function ProjectSection() {
             </div>
           </div>
         </div>
+        <div className='flex justify-end md:mt-4'>
+          <a href='https://www.linkedin.com/in/rifkymprayudhi/'>
+            <Button>
+              <p>More in touch</p>
+              <FaArrowRightLong />
+            </Button>
+          </a>
+        </div>
         <Typography.Insight bold text={`Certifications.`} />
         <div className='grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6'>
           <motion.div
@@ -155,15 +164,6 @@ export default function ProjectSection() {
           >
             <div className='w-full bg-no-repeat bg-cover bg-iwu-mentor aspect-[16/12]' />
           </motion.div>
-        </div>
-        <div className='flex justify-end'>
-          <a
-            className='flex items-center gap-4 text-green hover:text-blue'
-            href='https://www.linkedin.com/in/rifkymprayudhi/'
-          >
-            <Typography.Large text={`More in touch`} />
-            <FaArrowRightLong />
-          </a>
         </div>
       </Wrapper>
     </>

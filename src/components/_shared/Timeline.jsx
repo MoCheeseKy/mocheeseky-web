@@ -115,7 +115,7 @@ export default function Timeline() {
               <div className='h-14 absolute left-0.5 md:left-0.5 ml-[-5px] w-14 rounded-full bg-dark flex items-center justify-center shadow-lg z-40'>
                 <div className='z-50 w-6 h-6 rounded-full shadow-md bg-gradient-to-r from-blue to-red' />
               </div>
-              <h3 className='hidden text-2xl font-bold text-gray-300 md:text-4xl md:block md:pl-20 dark:text-gray-700'>
+              <h3 className='hidden text-2xl font-bold text-white md:text-4xl md:block md:pl-20 '>
                 {item.year}
               </h3>
             </div>
